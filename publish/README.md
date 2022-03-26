@@ -11,7 +11,7 @@ Adds a new command for measuring and visualizing distances.
 
 # Usage
 
-- `ruler`: Spawns the ruler object at your current position. If used at the same position, the object is removed.
+- `ruler`: Spawns the ruler object at your current position. If used at the same position, the ruler is removed.
 - `ruler [radius]`: Spawns the ruler with a custom radius. This can be used to visualize the distance.
 
 For example `bind o ruler` to quickly use the ruler with the O key. Or `bind o ruler 10` if you want to visualize a radius of 10 meters.
