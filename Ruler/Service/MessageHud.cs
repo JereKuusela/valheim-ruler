@@ -7,7 +7,7 @@ namespace Service {
   // Prepends a custom message to the hud.
   [HarmonyPatch(typeof(MessageHud), "Update")]
   public class MessageHud_UpdateMessage : MonoBehaviour {
-    public static Func<List<string>> GetMessage = () => new List<string>() { "CRAP" };
+    public static Func<List<string>> GetMessage = () => new() { "Default message. Overwrite this with own function." };
     public static void Postfix(MessageHud __instance) {
       // Wait for the game to load.
       if (Player.m_localPlayer == null) return;
