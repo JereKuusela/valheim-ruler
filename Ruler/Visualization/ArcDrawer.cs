@@ -80,6 +80,12 @@ public partial class Draw {
     var renderer = CreateRenderer(obj);
     UpdateArcZ(renderer, position, radius, angle, GetLineWidth(obj.name));
   }
+  public static GameObject DrawCircleY(string tag, GameObject parent, float radius) {
+    var obj = CreateObject(parent, tag);
+    DrawArcY(CreateObject(obj, tag), Vector3.zero, radius, 360f);
+    AddMeshCollider(obj);
+    return obj;
+  }
   ///<summary>Creates a renderer with two frontal arcs (vertical and horizontal).</summary>
   public static GameObject DrawArc(string tag, MonoBehaviour parent, Vector3 position, float radius, float angle) {
     var obj = CreateObject(parent.gameObject, tag);

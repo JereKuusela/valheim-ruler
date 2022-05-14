@@ -5,13 +5,24 @@ using Visualization;
 
 namespace Ruler;
 public class Settings {
+#nullable disable
   public static ConfigEntry<string> configColor;
   public static ConfigEntry<int> configLineWidth;
+  public static ConfigEntry<bool> configDrawAxis;
+  public static ConfigEntry<bool> configDraw3d;
+  public static ConfigEntry<bool> configShowText;
+#nullable enable
   public static void Init(ConfigFile config) {
-    configLineWidth = config.Bind("Ruler", "Line width", 10, "");
+    var section = "Ruler";
+    configLineWidth = config.Bind(section, "Line width", 10, "");
     OnWidthChanged(configLineWidth, Ruler.Tag);
-    configColor = config.Bind("Ruler", "Color", "red", "");
+    configColor = config.Bind(section, "Color", "red", "");
     OnColorChanged(configColor, Ruler.Tag);
+    configDrawAxis = config.Bind(section, "Draw axis", true, "Draws axis inside the ruler.");
+    configDrawAxis.SettingChanged += (s, e) => Ruler.Refresh();
+    configDraw3d = config.Bind(section, "Draw 3d", true, "Draws sphere instead of a circle.");
+    configDraw3d.SettingChanged += (s, e) => Ruler.Refresh();
+    configShowText = config.Bind(section, "Show text", true, "Shows distance on the HUD.");
     InitCommands();
   }
   private static Color ParseColor(string color) {

@@ -1,6 +1,6 @@
 {
   "name": "Ruler",
-  "version_number": "1.0.0",
+  "version_number": "1.1.0",
   "website_url": "https://github.com/JereKuusela/valheim-ruler",
   "description": "Adds a simple ruler for measuring distances.",
   "dependencies": [
