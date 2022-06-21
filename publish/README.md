@@ -7,7 +7,7 @@ Adds a new command for measuring and visualizing distances.
 1. Install the [BepInExPack Valheim](https://valheim.thunderstore.io/package/denikson/BepInExPack_Valheim/)
 2. Download the latest zip.
 3. Extract it in the \<GameDirectory\>\BepInEx\plugins\ folder.
-4. Optionally also install the [Configuration manager](https://github.com/BepInEx/BepInEx.ConfigurationManager/releases/tag/v16.4).
+4. Optionally also install the [Configuration manager](https://valheim.thunderstore.io/package/Azumatt/Official_BepInEx_ConfigurationManager/).
 
 # Usage
 
@@ -31,6 +31,11 @@ The distance is shown on the left side of the HUD. Following information is show
 - Show text (default: `true`): Whether to show text on the HUD.
 
 # Changelog
+
+- v1.2
+	- Changes the GUID which resets the configuration.
+	- Fixes the interact distance being increased.
+	- Fixes visuals not showing with the new Unity version.
 
 - v1.1
 	- Adds a new setting for drawing axis lines on the ruler sphere.

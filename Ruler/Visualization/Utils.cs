@@ -12,16 +12,16 @@ public class Player_AddHoverForVisuals {
 
   /// <summary>Extra hover search for drawn objects if no other hover object.</summary>
   static void Postfix(ref GameObject ___m_hovering, ref GameObject ___m_hoveringCreature) {
-    if (___m_hovering || ___m_hoveringCreature) return;
-    var distance = 50f;
-    var mask = LayerMask.GetMask(new[] { Draw.TriggerLayer });
+    if (___m_hovering || ___m_hoveringCreature || !Ruler.Ruler.Enabled) return;
+    var distance = 100f;
+    var mask = LayerMask.GetMask(Draw.TriggerLayer);
     var hits = Physics.RaycastAll(GameCamera.instance.transform.position, GameCamera.instance.transform.forward, distance, mask);
     // Reverse search is used to find edge when inside colliders.
     var reverseHits = Physics.RaycastAll(GameCamera.instance.transform.position + GameCamera.instance.transform.forward * distance, -GameCamera.instance.transform.forward, distance, mask);
     hits = hits.AddRangeToArray(reverseHits);
     Array.Sort<RaycastHit>(hits, (RaycastHit x, RaycastHit y) => x.distance.CompareTo(y.distance));
     foreach (var hit in hits) {
-      if (hit.collider.GetComponent<Hoverable>() != null) {
+      if (hit.collider.GetComponent<Visualization>() != null) {
         ___m_hovering = hit.collider.gameObject;
         return;
       }

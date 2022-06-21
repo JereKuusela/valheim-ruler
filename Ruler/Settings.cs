@@ -40,7 +40,7 @@ public class Settings {
   }
 
   private static void InitCommands() {
-    new Terminal.ConsoleCommand("ruler", "[radius] - Toggles or sets the ruler.", (Terminal.ConsoleEventArgs args) => {
+    new Terminal.ConsoleCommand("ruler", "[radius] - Toggles or sets the ruler.", (args) => {
       if (!Player.m_localPlayer) return;
       var radius = 0.1f;
       if (args.Length > 1)

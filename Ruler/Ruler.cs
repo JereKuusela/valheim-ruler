@@ -5,16 +5,20 @@ using Service;
 using UnityEngine;
 
 namespace Ruler;
-[BepInPlugin("valheim.jerekuusela.ruler", "Ruler", "1.1.0.0")]
+[BepInPlugin(GUID, NAME, VERSION)]
 public class Ruler : BaseUnityPlugin {
+  const string GUID = "ruler";
+  const string NAME = "Ruler";
+  const string VERSION = "1.2";
   public void Awake() {
     Settings.Init(Config);
-    Harmony harmony = new("valheim.jerekuusela.ruler");
+    Harmony harmony = new(GUID);
     harmony.PatchAll();
     MessageHud_UpdateMessage.GetMessage = GetMessage;
   }
-  public static string Tag = "valheim.jerekuusela.ruler";
+  public static string Tag = $"{GUID}.{NAME}";
   private static GameObject? ruler = null;
+  public static bool Enabled => ruler;
   public static void Remove() {
     if (ruler) Destroy(ruler);
     ruler = null;
