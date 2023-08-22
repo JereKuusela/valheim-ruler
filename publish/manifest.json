@@ -1,9 +1,9 @@
 {
   "name": "Ruler",
-  "version_number": "1.2.0",
+  "version_number": "1.3.0",
   "website_url": "https://github.com/JereKuusela/valheim-ruler",
   "description": "Adds a simple ruler for measuring distances.",
   "dependencies": [
-    "denikson-BepInExPack_Valheim-5.4.1901"
+    "denikson-BepInExPack_Valheim-5.4.2105"
   ]
 }

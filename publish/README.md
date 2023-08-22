@@ -2,14 +2,9 @@
 
 Adds a new command for measuring and visualizing distances.
 
-# Manual Installation
+Install on the client (modding [guide](https://youtu.be/L9ljm2eKLrk)).
 
-1. Install the [BepInExPack Valheim](https://valheim.thunderstore.io/package/denikson/BepInExPack_Valheim/)
-2. Download the latest zip.
-3. Extract it in the \<GameDirectory\>\BepInEx\plugins\ folder.
-4. Optionally also install the [Configuration manager](https://valheim.thunderstore.io/package/Azumatt/Official_BepInEx_ConfigurationManager/).
-
-# Usage
+## Usage
 
 - `ruler`: Spawns the ruler object at your current position. If used at the same position, the ruler is removed.
 - `ruler [radius]`: Spawns the ruler with a custom radius. This can be used to visualize the distance.
@@ -22,7 +17,7 @@ The distance is shown on the left side of the HUD. Following information is show
 - Total distance.
 - Distance on the XZ plane (without up / down direction).
 
-# Configuration
+## Configuration
 
 - Color (default: `red`): Color of the ruler object.
 - Draw 3d (default: `true`): Whether to draw the ruler object as a sphere or as a circle.
@@ -30,19 +25,10 @@ The distance is shown on the left side of the HUD. Following information is show
 - Line width (default: `10`): Size of the ruler object lines.
 - Show text (default: `true`): Whether to show text on the HUD.
 
-# Changelog
-
-- v1.2
-	- Changes the GUID which resets the configuration.
-	- Fixes the interact distance being increased.
-	- Fixes visuals not showing with the new Unity version.
-
-- v1.1
-	- Adds a new setting for drawing axis lines on the ruler sphere.
-	- Adds a new setting to disable HUD text.
-	- Adds a new setting to only draw the circle.
-
-- v1.0
-	- Initial release.
+## Credits
 
 Thanks for Azumatt for creating the mod icon!
+
+Sources: [GitHub](https://github.com/JereKuusela/valheim-ruler)
+
+Donations: [Buy me a computer](https://www.buymeacoffee.com/jerekuusela)
