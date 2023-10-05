@@ -33,6 +33,9 @@
     <Reference Include="UnityEngine.InputLegacyModule.dll">
       <HintPath>..\..\Libs\UnityEngine.InputLegacyModule.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.TextMeshPro.dll">
+      <HintPath>..\..\Libs\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
     <Reference Include="0Harmony.dll">
       <HintPath>..\..\Libs\0Harmony.dll</HintPath>
     </Reference>
