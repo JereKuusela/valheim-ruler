@@ -40,12 +40,22 @@ public class Settings {
   }
 
   private static void InitCommands() {
-    new Terminal.ConsoleCommand("ruler", "[radius] - Toggles or sets the ruler.", (args) => {
+    new Terminal.ConsoleCommand("ruler", "[radius] [x,z,y=player pos] - Toggles or sets the ruler.", (args) => {
       if (!Player.m_localPlayer) return;
       var radius = 0.1f;
       if (args.Length > 1)
         float.TryParse(args[1], NumberStyles.Float, CultureInfo.InvariantCulture, out radius);
-      Ruler.Toggle(Player.m_localPlayer.transform.position, radius);
+      Vector3 position = Player.m_localPlayer.transform.position;
+      if (args.Length > 2) {
+        var parts = args[2].Split(',');
+        if (parts.Length > 0)
+          float.TryParse(parts[0], NumberStyles.Float, CultureInfo.InvariantCulture, out position.x);
+        if (parts.Length > 1)
+          float.TryParse(parts[1], NumberStyles.Float, CultureInfo.InvariantCulture, out position.z);
+        if (parts.Length > 2)
+          float.TryParse(parts[2], NumberStyles.Float, CultureInfo.InvariantCulture, out position.y);
+      }
+      Ruler.Toggle(position, radius);
     });
   }
 }

@@ -10,7 +10,7 @@ public class Ruler : BaseUnityPlugin
 {
   const string GUID = "ruler";
   const string NAME = "Ruler";
-  const string VERSION = "1.5";
+  const string VERSION = "1.6";
   public void Awake()
   {
     Settings.Init(Config);

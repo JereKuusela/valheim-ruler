@@ -1,3 +1,6 @@
+- v1.6
+  - Adds coordinates to the ruler command to support Infinity Hammer integration.
+
 - v1.5
   - Fixed for the new game version.
 
@@ -16,6 +19,3 @@
   - Adds a new setting for drawing axis lines on the ruler sphere.
   - Adds a new setting to disable HUD text.
   - Adds a new setting to only draw the circle.
-
-- v1.0
-  - Initial release.

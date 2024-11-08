@@ -25,6 +25,12 @@ The distance is shown on the left side of the HUD. Following information is show
 - Line width (default: `10`): Size of the ruler object lines.
 - Show text (default: `true`): Whether to show text on the HUD.
 
+## Infinity Hammer integration
+
+Infinity Hammer allows placing the ruler more easily and precisely, including snapping to pieces.
+
+Add the ruler with command: `tool_import hammer name: Ruler\nicon: spears\ncommand: ruler <r> <x>,<z>,<y>\nsnapPiece: true\n`
+
 ## Credits
 
 Thanks for Azumatt for creating the mod icon!
