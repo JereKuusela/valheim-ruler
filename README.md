@@ -24,6 +24,7 @@ The distance is shown on the left side of the HUD. Following information is show
 - Draw axis (default `true`): Whether to draw axis lines on the ruler object.
 - Line width (default: `10`): Size of the ruler object lines.
 - Show text (default: `true`): Whether to show text on the HUD.
+- Shader (default: `Sprites/Default`): Shader to use. Previous default was `Particles/Standard Unlit2`.
 
 ## Infinity Hammer integration
 
